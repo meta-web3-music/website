@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-farro {
+	font-family: 'Farro', sans-serif;
+}
