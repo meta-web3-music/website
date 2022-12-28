@@ -8,7 +8,7 @@
 			<h2 class="mr-4 hover:underline">Blog</h2></a
 		>
 	</nav>
-	<button class="bg-[#BFB00D] px-2 py-1 rounded-lg" on:click={()=>window.location.href="https://app.octav3.com"}>Go to app</button>
+	<button class="bg-[#F3EA01] px-2 py-1 rounded-lg" on:click={()=>window.location.href="https://app.octav3.com"}>Go to app</button>
 </header>
 <div
 	class="landing-container h-full flex items-center justify-center flex-col font-farro bg-[#F7F7F7]"
