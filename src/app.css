@@ -9,3 +9,7 @@
 .font-figtree {
 	font-family: 'Figtree', sans-serif;
 }
+
+* {
+	transition: 0.3s;
+}

@@ -9,8 +9,28 @@
 		<link href="https://fonts.googleapis.com/css2?family=Farro&display=swap" rel="stylesheet" />
 		<link href="https://fonts.googleapis.com/css2?family=Figtree&display=swap" rel="stylesheet" />
 		<script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
+		<script src="https://code.iconify.design/3/3.0.1/iconify.min.js"></script>
 		%sveltekit.head%
 	</head>
+	<script>
+		const html_tag = document.getElementsByTagName('html').item(0);
+		const theme = localStorage.getItem('theme');
+		if (theme) {
+			if (theme == 'dark') {
+				html_tag?.classList.add('dark');
+			}
+		} else {
+			const darkThemeMq = window.matchMedia('(prefers-color-scheme: dark)');
+			const theme = localStorage.getItem('theme');
+			if (!theme && darkThemeMq.matches) {
+				html_tag?.classList.add('dark');
+			}
+			darkThemeMq.addListener((e) => {
+				const _theme = localStorage.getItem('theme');
+				if (!_theme && e.matches) html_tag?.classList.add('dark');
+			});
+		}
+	</script>
 	<body class="h-full">
 		<div class="h-full">%sveltekit.body%</div>
 	</body>
