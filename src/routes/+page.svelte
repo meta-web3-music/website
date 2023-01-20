@@ -30,7 +30,7 @@
 		OCTAV3 is a web3 music streaming platform that connects artists, listeners and advertisers.
 	</p>
 
-	<div class="flex text-[#BFB00D] mt-14 absolute bottom-40">
+	<div class="flex text-[#BFB00D] mt-14 absolute bottom-40 text-2xl">
 		<!-- TODO: Add target="_blank" rel="noopener noreferrer" -->
 		<a href="/"> <iconify-icon icon="bi:discord" class="mr-6" /></a>
 
