@@ -1,7 +1,7 @@
 <script>
 		import DarkModeToggle from '../components/DarkModeToggle.svelte'
 </script>
-<header class="flex px-5 py-4 items-center fixed w-full font-figtree bg-white dark:bg-[#121212]">
+<header class="flex px-5 py-4 items-center fixed w-full font-figtree bg-[#F7F7F7] dark:bg-[#121212]">
 	<h2 class="text-2xl font-bold dark:text-white">OCTAV3</h2>
 	<nav class="mx-auto flex text-[rgb(0,0,0,0.7)] dark:text-white">
 		<a href="https://octav3.gitbook.io/octav3/" target="_blank" rel="noopener noreferrer"
