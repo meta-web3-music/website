@@ -3,7 +3,7 @@
 </script>
 <header class="flex px-5 py-4 items-center fixed w-full font-figtree bg-[#F7F7F7] dark:bg-[#121212]">
 	<h2 class="text-2xl font-bold dark:text-white">OCTAV3</h2>
-	<nav class="mx-auto flex text-[rgb(0,0,0,0.7)] dark:text-white">
+	<nav class="flex text-[rgb(0,0,0,0.7)] dark:text-white absolute left-[50%] translate-x-[-50%]">
 		<a href="https://octav3.gitbook.io/octav3/" target="_blank" rel="noopener noreferrer"
 			><h2 class="mr-4 hover:underline">Docs</h2></a
 		>
@@ -11,7 +11,7 @@
 			<h2 class="mr-4 hover:underline">Blog</h2></a
 		>
 	</nav>
-	<div class="flex">
+	<div class="flex ml-auto">
 		<DarkModeToggle></DarkModeToggle>
 		<button class="bg-[#F3EA01] px-8 py-2 rounded-lg font-bold" on:click={()=>window.location.href="https://app.octav3.com"}>
 			Go to app
