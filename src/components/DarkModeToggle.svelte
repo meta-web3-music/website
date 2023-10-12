@@ -1,6 +1,6 @@
 <script lang="ts">
     import { browser } from '$app/environment'
-	  import type { Theme } from 'src/types/theme';
+	  import type { Theme } from '../types/theme';
     let html_tag : HTMLHtmlElement|null
     if (browser) {
       html_tag = document.getElementsByTagName("html").item(0) 
