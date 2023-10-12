@@ -1,41 +1,46 @@
-<script>
-    import DarkModeToggle from '../components/DarkModeToggle.svelte'
-</script>
-<header class="flex px-5 py-4 items-center fixed w-full font-figtree bg-[#F7F7F7] dark:bg-[#121212]">
-<h2 class="text-2xl font-bold dark:text-white">OCTAV3</h2>
-<nav class="flex text-[rgb(0,0,0,0.7)] dark:text-white absolute left-[50%] translate-x-[-50%]">
-    <a href="https://octav3.gitbook.io/octav3/" target="_blank" rel="noopener noreferrer"
-        ><h2 class="mr-4 hover:underline">Docs</h2></a
-    >
-    <a href="https://octav3.substack.com/" target="_blank" rel="noopener noreferrer">
-        <h2 class="mr-4 hover:underline">Blog</h2></a
-    >
-</nav>
-<div class="flex ml-auto">
-    <DarkModeToggle></DarkModeToggle>
-    <button class="bg-[#F3EA01] px-8 py-2 rounded-lg font-bold" on:click={()=>window.location.href="https://app.octav3.com"}>
-        Go to app
-    </button>
-</div>
+<header
+	class="flex px-5 py-4 items-center fixed w-full font-figtree bg-[#F7F7F7] dark:bg-[#121212]"
+>
+	<img src="/images/OCTAV3_logo.png" />
+	<div class="mx-1" />
+	<h2 class="text-2xl font-bold dark:text-white">OCTAV3</h2>
 
+	<div class="flex fixed bottom-8 right-8">
+		<button
+			class="bg-[#F3EA01] pl-4 py-2 rounded-3xl font-semibold flex items-center"
+			on:click={() => (window.location.href = 'https://app.octav3.com')}
+		>
+			Visit Classic OCTAV3
+			<span class="text-3xl my-auto leading-6">
+				<iconify-icon icon="mdi-light:chevron-right" />
+			</span>
+		</button>
+	</div>
 </header>
 <div
-class="landing-container h-full flex items-center justify-center flex-col font-figtree bg-[#F7F7F7] dark:bg-[#121212]"
+	class="landing-container h-full flex items-center justify-center flex-col font-figtree bg-[#F7F7F7] dark:bg-[#121212]"
 >
-<div class="inline-flex flex-col text-center font-bold text-7xl dark:text-white">
-<p>Make Money From Your</p>
-<p> Music NFTs</p>
-</div>
-<p class="mx-20 lg:mx-60 mt-1 text-center text-xl text-[rgb(0,0,0,0.56)] dark:text-white">
-    OCTAV3 is a web3 music streaming platform that connects artists, listeners and advertisers.
-</p>
+	<div class="inline-flex flex-col text-center font-bold text-7xl dark:text-white">
+		<p>Stay In Touch With Your Favourite</p>
+		<p>Artists & Music Community</p>
+	</div>
 
-<div class="flex text-[#BFB00D] mt-14 absolute bottom-40 text-2xl">
-    <!-- TODO: Add target="_blank" rel="noopener noreferrer" -->
-    <a href="/"> <iconify-icon icon="bi:discord" class="mr-6" /></a>
-
-    <a href="https://twitter.com/octav3_music" target="_blank" rel="noopener noreferrer">
-        <iconify-icon icon="bi:twitter" /></a
-    >
-</div>
+	<p class="mx-20 lg:mx-60 mt-1 text-center text-xl text-[rgba(255,255,255,0.56)]">
+		OCTAV3 unites artists and fans. Stream, Connect, and Collect music like never before!
+	</p>
+	<div class="my-4" />
+	<div class="text-white flex flex-col">
+		<div class="border-[#34343C] border-2 rounded-xl flex items-center">
+			<input
+				type="text"
+				placeholder="E-mail"
+				class="bg-transparent p-4 w-[80vw] md:w-[67vw] lg:w-[50vw] active:outline-none active:border-none focus:outline-none focus:border-none"
+			/>
+			<span class="text-2xl leading-3 mr-3">
+				<iconify-icon icon="cil:arrow-right" />
+			</span>
+		</div>
+		<div class="my-2" />
+		<p class="ml-auto uppercase">Join the wailist For early access</p>
+	</div>
 </div>
