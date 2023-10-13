@@ -1,3 +1,39 @@
+<script>
+	import { createClient } from '@supabase/supabase-js';
+	import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_KEY } from '$env/static/public';
+	export let form;
+	let email = '';
+
+	let waitlist_added = false;
+	let already_exist = false;
+
+	const supabaseUrl = PUBLIC_SUPABASE_URL;
+	const supabaseKey = PUBLIC_SUPABASE_KEY;
+	const supabase = createClient(supabaseUrl, supabaseKey);
+	// Make a request
+
+	const run = async () => {
+		if (email == '' || !email) {
+			alert('email is required');
+			return;
+		}
+		const { error } = await supabase.from('mails').insert({ email_id: email });
+		if (!!error && error?.code == '23505') {
+			already_exist = true;
+			console.log('email already exist');
+			setTimeout(() => {
+				already_exist = false;
+			}, 2500);
+			return;
+		}
+		waitlist_added = true;
+		setTimeout(() => {
+			waitlist_added = false;
+		}, 5000);
+		console.log('inserted');
+	};
+</script>
+
 <header
 	class="flex px-5 py-4 items-center fixed w-full font-figtree bg-[#F7F7F7] dark:bg-[#121212]"
 >
@@ -30,17 +66,28 @@
 	</p>
 	<div class="my-4" />
 	<div class="text-white flex flex-col">
-		<div class="border-[#34343C] border-2 rounded-xl flex items-center">
+		<form class="border-[#34343C] border-2 rounded-xl flex items-center" on:submit={run}>
+			{#if form?.error}
+				<p class="error">{form.error}</p>
+			{/if}
 			<input
-				type="text"
+				required
+				type="email"
 				placeholder="E-mail"
+				bind:value={email}
 				class="bg-transparent p-4 w-[80vw] md:w-[67vw] lg:w-[50vw] active:outline-none active:border-none focus:outline-none focus:border-none"
 			/>
-			<span class="text-2xl leading-3 mr-3">
+			<button class="text-2xl leading-3 mr-3">
 				<iconify-icon icon="cil:arrow-right" />
-			</span>
-		</div>
+			</button>
+		</form>
 		<div class="my-2" />
-		<p class="ml-auto uppercase">Join the wailist For early access</p>
+		<p class="ml-auto uppercase">
+			{#if already_exist}
+				Email already exist
+			{:else}
+				{waitlist_added ? 'Wailist joined' : 'Join the wailist For early access'}
+			{/if}
+		</p>
 	</div>
 </div>
