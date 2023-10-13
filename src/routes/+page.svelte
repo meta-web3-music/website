@@ -56,14 +56,17 @@
 <div
 	class="landing-container h-full flex items-center justify-center flex-col font-figtree bg-[#F7F7F7] dark:bg-[#121212]"
 >
-	<div class="inline-flex flex-col text-center font-bold text-7xl dark:text-white">
+	<div class="inline-flex flex-col text-center font-bold text-5xl dark:text-white">
 		<p>Stay In Touch With Your Favourite</p>
 		<p>Artists & Music Community</p>
 	</div>
 
-	<p class="mx-20 lg:mx-60 mt-1 text-center text-xl text-[rgba(255,255,255,0.56)]">
-		OCTAV3 unites artists and fans. Stream, Connect, and Collect music like never before!
+	<div class="my-2" />
+	<p class="mx-20 lg:mx-60 text-center text-xl text-[rgba(255,255,255,0.56)]">
+		OCTAV3 unites artists and fans. Stream, Connect, and Collect music
 	</p>
+	<p class="mx-20 lg:mx-60 text-center text-xl text-[rgba(255,255,255,0.56)]">like never before!</p>
+
 	<div class="my-4" />
 	<div class="text-white flex flex-col">
 		<form class="border-[#34343C] border-2 rounded-xl flex items-center" on:submit={run}>
@@ -75,14 +78,14 @@
 				type="email"
 				placeholder="E-mail"
 				bind:value={email}
-				class="bg-transparent p-4 w-[80vw] md:w-[67vw] lg:w-[50vw] active:outline-none active:border-none focus:outline-none focus:border-none"
+				class="bg-transparent p-4 w-[80vw] md:w-[67vw] lg:w-[30vw] active:outline-none active:border-none focus:outline-none focus:border-none"
 			/>
 			<button class="text-2xl leading-3 mr-3">
 				<iconify-icon icon="cil:arrow-right" />
 			</button>
 		</form>
 		<div class="my-2" />
-		<p class="ml-auto uppercase">
+		<p class="ml-auto uppercase text-sm">
 			{#if already_exist}
 				Email already exist
 			{:else}
