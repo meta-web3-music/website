@@ -56,16 +56,20 @@
 <div
 	class="landing-container h-full flex items-center justify-center flex-col font-figtree bg-[#F7F7F7] dark:bg-[#121212]"
 >
-	<div class="inline-flex flex-col text-center font-bold text-5xl dark:text-white">
+	<div
+		class="inline-flex flex-col text-center font-bold text-[1.30rem] md:text-5xl dark:text-white"
+	>
 		<p>Stay In Touch With Your Favourite</p>
 		<p>Artists & Music Community</p>
 	</div>
 
 	<div class="my-2" />
-	<p class="mx-20 lg:mx-60 text-center text-xl text-[rgba(255,255,255,0.56)]">
+	<p class="mx-20 lg:mx-60 text-center md:text-xl text-[rgba(255,255,255,0.56)]">
 		OCTAV3 unites artists and fans. Stream, Connect, and Collect music
 	</p>
-	<p class="mx-20 lg:mx-60 text-center text-xl text-[rgba(255,255,255,0.56)]">like never before!</p>
+	<p class="mx-20 lg:mx-60 text-center md:text-xl text-[rgba(255,255,255,0.56)]">
+		like never before!
+	</p>
 
 	<div class="my-4" />
 	<div class="text-white flex flex-col">
@@ -78,7 +82,7 @@
 				type="email"
 				placeholder="E-mail"
 				bind:value={email}
-				class="bg-transparent p-4 w-[80vw] md:w-[67vw] lg:w-[30vw] active:outline-none active:border-none focus:outline-none focus:border-none"
+				class="bg-transparent p-4 w-[70vw] md:w-[67vw] lg:w-[30vw] active:outline-none active:border-none focus:outline-none focus:border-none"
 			/>
 			<button class="text-2xl leading-3 mr-3">
 				<iconify-icon icon="cil:arrow-right" />
