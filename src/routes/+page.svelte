@@ -37,7 +37,7 @@
 <header
 	class="flex px-5 py-4 items-center fixed w-full font-figtree bg-[#F7F7F7] dark:bg-[#121212]"
 >
-	<img src="/images/OCTAV3_logo.png" />
+	<img src="/images/OCTAV3_logo.png" class="w-8" />
 	<div class="mx-1" />
 	<h2 class="text-2xl font-bold dark:text-white">OCTAV3</h2>
 
